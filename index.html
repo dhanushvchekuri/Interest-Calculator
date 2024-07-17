@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Dhanush Varma Chekuri" />
+    <meta name="description" content="This Page Lets you calculate Interests" />
+    <meta
+      name="description"
+      content="Calculate simple and compound interests"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Calculate Simple & Compound Interests</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+       <h1>Interest Calculator</h1>
+      </div>
+      <div class="content">
+        <fieldset class="form">
+          <div class="toggle">
+            <button class="togglesimple">Simple Interest</button>
+            <button class="togglecompound">Compound Interest</button>
+          </div>
+          <div class="formdata">
+            <label for="principal">Principal: </label>
+            <input
+              type="number"
+              name="principal"
+              id="principal"
+              required
+              class="form-control"
+            />
+            <label for="interest">Interest: </label>
+            <input
+              type="number"
+              name="interest"
+              id="interest"
+              required
+              class="form-control"
+            />
+            <label for="time">Time: </label>
+            <input
+              type="number"
+              name="time"
+              id="time"
+              required
+              class="form-control"
+              placeholder="In Years"
+            />
+            <div class="submitreset">
+              <input
+                type="submit"
+                value="Calculate Interest"
+                id="calcsimpleinterest"
+              />
+              <input type="reset" value="Reset" id="resetinputs"/>
+            </div>
+            <div id="output"></div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="footer">
+        <h3>&copy;Dhanush Varma Chekuri</h3>
+        <a href="https://github.com/dhanushvchekuri" target="_blank">
+          <i class="fa-brands fa-github fa-lg icon" style="color: #1e3050"></i>
+        </a>
+        <a href="https://x.com/dvchekuri" target="_blank">
+          <i class="fa-brands fa-square-x-twitter fa-lg icon" style="color: #1e3050">
+          </i>
+        </a>
+        <a href="">
+          <i class="fa-brands fa-linkedin fa-lg icon" style="color: #1e3050"></i>
+        </a>
+      </div>
+    </div>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

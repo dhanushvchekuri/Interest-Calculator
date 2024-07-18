@@ -39,10 +39,10 @@
       <div class="content">
         <fieldset class="form">
           <div class="toggle">
-            <button class="togglesimple">Simple Interest</button>
-            <button class="togglecompound">Compound Interest</button>
+            <button id="togglesimple">Simple Interest</button>
+            <button id="togglecompound">Compound Interest</button>
           </div>
-          <div class="formdata">
+          <div class="simple-interest-form">
             <label for="principal">Principal: </label>
             <input
               type="number"
@@ -74,9 +74,53 @@
                 value="Calculate Interest"
                 id="calcsimpleinterest"
               />
-              <input type="reset" value="Reset" id="resetinputs"/>
+              <input type="reset" value="Reset" id="resetinputs" />
             </div>
             <div id="output"></div>
+          </div>
+          <div class="compound-interest-form">
+            <label for="cprincipal">Principal: </label>
+            <input
+              type="number"
+              name="cprincipal"
+              id="cprincipal"
+              required
+              class="form-control"
+            />
+            <label for="cinterest">Interest: </label>
+            <input
+              type="number"
+              name="cinterest"
+              id="cinterest"
+              required
+              class="form-control"
+            />
+            <label for="compound" title="Number of times interest is compounded per year">Compounding Frequency: </label>
+            <input
+              type="number"
+              name="compound"
+              id="compound"
+              required
+              class="form-control"
+            />
+            <label for="ctime">Time: </label>
+            <input
+              type="number"
+              name="ctime"
+              id="ctime"
+              required
+              class="form-control"
+              placeholder="In Years"
+            />
+            <div class="submitreset">
+              <input
+                type="submit"
+                value="Calculate Interest"
+                id="calccompoundinterest"
+              />
+              <input type="reset" value="Reset" id="resetinputscom" />
+            </div>
+            <div id="coutput"></div>
           </div>
         </fieldset>
       </div>
@@ -86,11 +130,17 @@
           <i class="fa-brands fa-github fa-lg icon" style="color: #1e3050"></i>
         </a>
         <a href="https://x.com/dvchekuri" target="_blank">
-          <i class="fa-brands fa-square-x-twitter fa-lg icon" style="color: #1e3050">
+          <i
+            class="fa-brands fa-square-x-twitter fa-lg icon"
+            style="color: #1e3050"
+          >
           </i>
         </a>
         <a href="">
-          <i class="fa-brands fa-linkedin fa-lg icon" style="color: #1e3050"></i>
+          <i
+            class="fa-brands fa-linkedin fa-lg icon"
+            style="color: #1e3050"
+          ></i>
         </a>
       </div>
     </div>

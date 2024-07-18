@@ -23,6 +23,12 @@ body {
   height: 50px;
 }
 
+.container .header h1 {
+  font-weight: 600;
+  padding-left: 5px;
+  color: whitesmoke;
+}
+
 .container .content {
   flex: 1;
   background-color: whitesmoke;
@@ -54,29 +60,44 @@ body {
   height: 40px;
   border-radius: 3px;
   cursor: pointer;
+  font-size: 17px;
 }
 
-.form .formdata {
+.form .toggle button:focus {
+  border: 2px solid black;
+}
+
+.form .simple-interest-form {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.formdata label {
+.form .compound-interest-form {
+  display: none;
+  flex-direction: column;
+  height: 100%;
+}
+
+.simple-interest-form label,
+.compound-interest-form label {
   font-size: 25px;
   font-weight: 600;
   margin-left: 5px;
 }
 
-.formdata input[type='number'] {
+.simple-interest-form input[type='number'],
+.compound-interest-form input[type='number'] {
   height: 35px;
   background-color: transparent;
   padding-left: 3px;
   border-radius: 3px;
 }
 
-.formdata input[type='submit'],
-.formdata input[type='reset'] {
+.simple-interest-form input[type='submit'],
+.simple-interest-form input[type='reset'],
+.compound-interest-form input[type='submit'],
+.compound-interest-form input[type='reset'] {
   margin: 5px 1px auto;
   font-weight: 600;
   height: 40px;
@@ -87,15 +108,17 @@ body {
   cursor: pointer;
 }
 
-.formdata .submitreset {
+.simple-interest-form .submitreset,
+.compound-interest-form .submitreset {
   display: flex;
 }
 
-.formdata input[type='submit']:hover,
-.formdata input[type='reset']:active {
+.simple-interest-form input[type='submit']:hover,
+.simple-interest-form input[type='reset']:hover,
+.compound-interest-form input[type='submit']:hover,
+.compound-interest-form input[type='reset']:hover {
   background-color: #4582ec;
   color: whitesmoke;
-  cursor: grab;
 }
 
 .container .footer {
@@ -113,6 +136,7 @@ body {
   font-size: x-large;
 }
 
-.form .formdata #output {
- margin-top: auto;
+.form .simple-interest-form #output,
+.form .compound-interest-form #coutput {
+  margin-top: auto;
 }

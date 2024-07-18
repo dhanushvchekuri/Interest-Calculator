@@ -53,6 +53,7 @@ body {
   border-style: none;
   height: 40px;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .form .formdata {
@@ -83,6 +84,7 @@ body {
   border-radius: 5px;
   flex: 1;
   padding: 3px;
+  cursor: pointer;
 }
 
 .formdata .submitreset {
@@ -90,9 +92,10 @@ body {
 }
 
 .formdata input[type='submit']:hover,
-.formdata input[type='reset']:hover {
+.formdata input[type='reset']:active {
   background-color: #4582ec;
   color: whitesmoke;
+  cursor: grab;
 }
 
 .container .footer {

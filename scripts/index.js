@@ -9,22 +9,32 @@ document.addEventListener('DOMContentLoaded', () => {
     let interestRate = interest / 100
     const time = document.getElementById('time').value
     totalInterest = principal * interestRate * time
+    output.textContent = '';
+    if (principal =='' || interest=='' || time=='') {
+      output.textContent = 'Please Enter Correct Values!!!'
+    } else {
+      const totalInterestText = document.createTextNode(
+        `Your total interest for principal of ${principal} with an interest rate of ${interest}% over the span of ${time} years is ${totalInterest}.`
+      )
 
-    const totalInterestText = document.createTextNode(
-      `Your total interest for principal of ${principal} with an interest rate of ${interest}% over the span of ${time} years is ${totalInterest}.`
-    )
+      // Create the line break element
+      const lineBreak = document.createElement('br')
 
-    // Create the line break element
-    const lineBreak = document.createElement('br')
+      const bold = document.createElement('b')
+      const boldText = document.createTextNode(`Monthly: `);
 
-    const monthlyInterestText = document.createTextNode(
-      `Monthly: ${totalInterest / (time * 12)}`
-    )
+      bold.appendChild(boldText);
 
-    // Append the text nodes and line break to the output element
-    output.appendChild(totalInterestText)
-    output.appendChild(lineBreak)
-    output.appendChild(monthlyInterestText)
+      const monthlyInterestText = document.createTextNode(
+        `${totalInterest / (time * 12)}`
+      )
+
+      // Append the text nodes and line break to the output element
+      output.appendChild(totalInterestText)
+      output.appendChild(lineBreak)
+      output.appendChild(bold);
+      output.appendChild(monthlyInterestText)
+    }
   })
 
   const reset = document.querySelector('#resetinputs')
